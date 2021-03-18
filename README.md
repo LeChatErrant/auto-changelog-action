@@ -51,6 +51,9 @@ github_api:
 exclude_tags_regex:
   description: 'Apply a regular expression on tag names so that they can be excluded, for example: --exclude-tags-regex ".*+d{1,}".'
   required: false
+unreleased_only:
+  description: 'Generate log from unreleased closed issues only.'
+  required: false
 ```
 
 
