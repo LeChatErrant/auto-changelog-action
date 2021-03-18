@@ -54,6 +54,9 @@ inputs:
   exclude_tags_regex:
     description: 'Apply a regular expression on tag names so that they can be excluded, for example: --exclude-tags-regex ".*+d{1,}".'
     required: false
+  unreleased_only:
+    description: 'Generate log from unreleased closed issues only.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -73,3 +76,4 @@ runs:
     - ${{ inputs.github_site }}
     - ${{ inputs.github_api }}
     - ${{ inputs.exclude_tags_regex}}
+    - ${{ inputs.unreleased_only}}
